@@ -15,10 +15,25 @@ img {
 }
 
 .container {
-  max-width: 1110px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: calc(1110px + 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
 }
 
 .hidden {
   display: none !important;
+}
+
+.py-rem {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
