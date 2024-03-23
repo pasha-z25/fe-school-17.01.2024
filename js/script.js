@@ -8,6 +8,10 @@ function formHandler(event) {
     // ... some code ...
 }
 
+function logoutHandler(event) {
+    // ... some code ...
+}
+
 function toggleSections(hasUser = false) {
     // ... some code ...
 }
