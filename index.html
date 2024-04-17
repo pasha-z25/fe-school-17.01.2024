@@ -1,28 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson template</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lesson template</title>
-  <link rel="stylesheet" href="./fonts/fonts.css">
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
-<body>
-  <header></header>
-  <main>
-    <section class="py-rem">
+  <body>
+    <header class="header">
       <div class="container">
-        <h1 class="main-title">Lesson #</h1>
-        <p class="description py-rem">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <!-- <img src="images/nature.jpg" alt="nature"> -->
+        <div class="wrap">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ex unde numquam odit, error voluptatibus
+          necessitatibus quae asperiores minus rerum architecto distinctio facere animi saepe!
+        </div>
+        <div class="logo"><img src="" alt="logo" /></div>
+        <div class="naw-wrap">
+          <p class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
+          <nav class="nav">
+            <ul>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer></footer>
+    </header>
+    <main>
+      <section class="promo"></section>
+      <section class="py-rem">
+        <div class="container">
+          <h1 class="main-title">Lesson lorem ipsum</h1>
+          <button class="popup">Open</button>
+          <p class="description py-rem">
+            Lorem ipsum dolor sit amet consectetur adipisicingdolor sit amet consectetur adipisicing elit.
+          </p>
+          <!--  -->
 
-  <script src="./js/script.js"></script>
-</body>
+          <div class="card" style="width: 400px">
+            <img src="images/cat.webp" alt="nature" />
+            <p class="description py-rem">
+              Lorem ipsum dolor sit amet consectetur adipisicingdolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
 
+          <form>
+            <input type="email" name="" id="" placeholder="text" required />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- <img src="./images/Facebook-Footer.svg" alt="Facebook"> -->
+      <a class="social" href="facebook.com">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_22721_8205)">
+            <path
+              d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+              fill="#24A3FF"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_22721_8205">
+              <rect width="38" height="38" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </footer>
+
+    <div class="popup-wrapper">
+      <div class="popup-window">
+        <span class="close">&times;</span>
+        <h3>We would like to help you</h3>
+        <form>
+          <input type="text" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 :root {
-  --basic-font-family: "Roboto", sans-serif;
+  --basic-font-family: 'Roboto', sans-serif;
   --basic-font-size: 16px;
   --basic-font-weight: 400;
   --basic-line-height: 1.5;
@@ -61,4 +61,146 @@ body {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+input[type='email']:invalid {
+  border-color: red;
+}
+
+.burger {
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid; */
+  position: relative;
+  float: right;
+  cursor: pointer;
+  z-index: 5;
+}
+.burger span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  left: 5px;
+  background-color: #202020;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.burger span:first-child {
+  top: 10px;
+}
+.burger span:nth-child(2),
+.burger span:nth-child(3) {
+  top: 24px;
+}
+.burger span:last-child {
+  top: 40px;
+}
+
+.burger.active span:first-child {
+  top: -10px;
+  opacity: 0;
+}
+.burger.active span:nth-child(2) {
+  transform: rotate(45deg);
+  background-color: #cc2020;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #cc2020;
+}
+.burger.active span:last-child {
+  top: 60px;
+  opacity: 0;
+}
+
+.header {
+  color: #202020;
+  position: absolute;
+}
+
+.gradient .header {
+  color: #fff;
+}
+.nav ul {
+  list-style: none;
+}
+.promo {
+  min-height: 100vh;
+  background-image: url('../images/Symbol.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.popup-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  background-color: #323264;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.popup-wrapper.active {
+  display: flex;
+}
+
+.popup-window {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.popup-window .close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 2rem;
+}
+.social svg {
+  width: 20px;
+  height: 20px;
+}
+.social svg path {
+  fill: #b3b3ba;
+}
+
+.social:hover svg path {
+  fill: #f0145a;
+}
+
+@media (max-width: 992px) {
+  .nav {
+    /* display: none; */
+    position: fixed;
+    inset: 0;
+    background-color: #323264;
+    z-index: -2;
+    opacity: 0;
+  }
+  .nav ul {
+    position: absolute;
+    inset: 55px 8px 8px;
+    padding: 55px 15px 15px;
+    background-color: #fff;
+    border-radius: 1rem;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+  }
+  .nav.active {
+    /* display: block; */
+    z-index: 2;
+    opacity: 1;
+  }
+  .nav.active ul {
+    transform: translateY(0);
+
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  }
 }
