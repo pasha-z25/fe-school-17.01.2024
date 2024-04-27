@@ -4,8 +4,9 @@
   --basic-font-weight: 400;
   --basic-line-height: 1.5;
   --basic-text-color: #202020;
-  --container-width: 1110px;
-  --basic-space: 1rem;
+  --container-width: 1360px;
+  --container-large-width: 1600px;
+  --basic-space: 60px;
 }
 
 * {
@@ -47,6 +48,10 @@ body {
   padding-left: var(--basic-space);
   padding-right: var(--basic-space);
   position: relative;
+}
+
+.container.large {
+  max-width: calc(var(--container-large-width) + var(--basic-space) * 2);
 }
 
 .hidden {
@@ -116,7 +121,7 @@ input[type='email']:invalid {
 
 .header {
   color: #202020;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .gradient .header {
@@ -175,6 +180,35 @@ input[type='email']:invalid {
   fill: #f0145a;
 }
 
+.tabs-section {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  color: #fff;
+}
+.tabs-section .container {
+  display: flex;
+}
+
+.tabs-section .nav-wrap {
+  width: 100%;
+  max-width: 375px;
+}
+.tabs-section .nav-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--basic-space) / 2);
+  width: 100%;
+}
+.tabs-section .nav-link {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.tabs-section .tab-content {
+  flex: 1;
+  margin-left: var(--basic-space);
+  padding-left: var(--basic-space);
+  border-left: 4px solid #ffffff4d;
+}
+
 @media (max-width: 992px) {
   .nav {
     /* display: none; */
@@ -202,5 +236,37 @@ input[type='email']:invalid {
     transform: translateY(0);
 
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  }
+  .tabs-section .container {
+    display: block;
+  }
+  .tabs-section .nav-wrap {
+    width: 100vw;
+    max-width: initial;
+    margin-left: calc(var(--basic-space) * -1);
+    margin-right: calc(var(--basic-space) * -1);
+    padding-left: var(--basic-space);
+    padding-right: var(--basic-space);
+    overflow-x: auto;
+  }
+  .tabs-section .nav-tabs {
+    flex-direction: row;
+  }
+  .tabs-section .nav-link {
+    min-width: 200px;
+  }
+  .tabs-section .tab-content {
+    flex: 1;
+    margin-top: var(--basic-space);
+    padding-top: var(--basic-space);
+    border-top: 4px solid #ffffff4d;
+    border-left: unset;
+    margin-left: initial;
+    padding-left: initial;
+  }
+}
+@media (max-width: 550px) {
+  :root {
+    --basic-space: 30px;
   }
 }
